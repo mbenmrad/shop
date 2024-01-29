@@ -1,0 +1,18 @@
+
+.custom-table{
+    margin-right: 50px;
+}
+
+:host ::ng-deep .p-dialog .product-image {
+    width: 150px;
+    margin: 0 auto 2rem auto;
+    display: block;
+}
+
+.display-contents {
+    display: contents;
+}
+
+.card{
+    min-width: 1130px;
+}
