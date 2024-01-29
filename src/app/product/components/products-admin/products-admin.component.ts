@@ -3,7 +3,7 @@ import { Product, Representative } from 'app/product/domain/product';
 import { ProductService } from 'app/product/services/product.service';
 import { EventDriverService } from 'app/product/state/event.driver.service';
 import { ProductActionTypes } from 'app/product/state/product.state';
-import { LazyLoadEvent, SelectItem } from 'primeng/api';
+import {  SelectItem } from 'primeng/api';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { v4 as uuidv4 } from 'uuid';
 

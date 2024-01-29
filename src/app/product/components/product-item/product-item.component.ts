@@ -8,15 +8,11 @@ import { ActionEvent, ProductActionTypes } from 'app/product/state/product.state
   templateUrl: './product-item.component.html',
   styleUrls: ['./product-item.component.scss']
 })
-export class ProductItemComponent implements OnInit {
+export class ProductItemComponent {
   @Input() product: Product|null = null;
   @Input() editing : boolean= false;
   @Input() ri : number = 0;
   constructor(private eventDriverService: EventDriverService) { }
-
-  ngOnInit(): void {
-  }
-  
   onRowEditInit(product: Product) {
   this.eventDriverService.publishEvent({type: ProductActionTypes.EDIT_PRODUCT_INIT, payload: product});
 }
@@ -31,7 +27,6 @@ onRowEditCancel(product: Product, index: number) {
 }
 
 deleteProduct(product: Product) {
-  console.log("deleteProduct", product);
   this.eventDriverService.publishEvent({type: ProductActionTypes.DELETE_PRODUCT, payload: product});
 
 }
